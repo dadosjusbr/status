@@ -45,10 +45,10 @@ func main() {
 import status
 
 def myfunc():
-    return status.NewError(status.DataUnavailable, "Este é um exemplo!")
+    return status.Error(status.DataUnavailable, "Este é um exemplo!")
 
 err = myfunc()
-status.ExitFromError(err)
+status.exit_from_error(err)
 ```
 ## Atulizando a lib no pypi
 

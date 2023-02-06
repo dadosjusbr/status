@@ -1,6 +1,5 @@
 import logging
 import sys
-from typing import Union
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -31,11 +30,12 @@ statusText = {
 
 # Text returns a text for a status code. It returns the empty
 # string if the code is unknown.
-def Text(code: Code) -> str:
+def text(code: Code) -> str:
     return statusText.get(code, '')
 
 # Error wraps a code and a error messager
 class Error(Exception):
+
     def __init__(self, code: Code, err: Exception):
         self.code = code
         self.err = err
@@ -43,13 +43,9 @@ class Error(Exception):
     def error(self):
         return f'Error {self.code}: {self.error}'
 
-# NewError creates a new Error
-def NewError(code: Code, error: Exception) -> Error:
-    return Error(code, error)
-
-# ExitFromError logs the error message and call sys.Exit
+# exit_from_error logs the error message and call sys.Exit
 # passing the code if err is of type Error
-def ExitFromError(err: Error):
+def exit_from_error(err: Error):
     if isinstance(err, Error):
         logging.error(err.err)
         sys.exit(err.code)
