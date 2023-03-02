@@ -6,14 +6,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='statusDadosjusbr',
-    version='0.1',
+    version='0.2',
     author="Dadosjusbr",
     author_email="dadosjusbr@gmail.com",
     description="Contém os status de execução dos coletores do DadosjusBr",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/dadosjusbr/status/",
-    packages=setuptools.find_packages(),
+    packages=['status'],
     classifiers=[
         "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
