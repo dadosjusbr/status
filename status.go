@@ -43,6 +43,9 @@ const (
 
 	// OutputError will be raised when the stage is not able to print the correct output.
 	OutputError Code = 8
+
+	// DeadlineExceeded means that a given action was not completed within an expected timeframe.
+	DeadlineExceeded Code = 9
 )
 
 var (
@@ -56,6 +59,7 @@ var (
 		Unknown:           "Unknown",
 		InvalidInput:      "Invalid Input",
 		OutputError:       "Output Error",
+		DeadlineExceeded:  "Context Deadline Exceeded",
 	}
 )
 
