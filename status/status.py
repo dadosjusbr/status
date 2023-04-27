@@ -15,7 +15,7 @@ InvalidFile = 5
 Unknown = 6
 InvalidInput = 7
 OutputError = 8
-ContextDeadlineExceeded = 9
+DeadlineExceeded = 9
 
 statusText = {
     OK: "OK",
@@ -27,7 +27,7 @@ statusText = {
     Unknown: "Unknown",
     InvalidInput: "Invalid Input",
     OutputError: "Output Error",
-    ContextDeadlineExceeded: "Context Deadline Exceeded",
+    DeadlineExceeded: "Context Deadline Exceeded",
 }
 
 # Text returns a text for a status code. It returns the empty
