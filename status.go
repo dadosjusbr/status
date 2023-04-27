@@ -43,19 +43,23 @@ const (
 
 	// OutputError will be raised when the stage is not able to print the correct output.
 	OutputError Code = 8
+
+	// ContextDeadlineExceeded means that a given action was not completed within an expected timeframe.
+	ContextDeadlineExceeded Code = 9
 )
 
 var (
 	statusText = map[Code]string{
-		OK:                "OK",
-		InvalidParameters: "Invalid Parameters",
-		SystemError:       "System Error",
-		ConnectionError:   "Connection Error",
-		DataUnavailable:   "Data Unavailable",
-		InvalidFile:       "Invalid File",
-		Unknown:           "Unknown",
-		InvalidInput:      "Invalid Input",
-		OutputError:       "Output Error",
+		OK:                      "OK",
+		InvalidParameters:       "Invalid Parameters",
+		SystemError:             "System Error",
+		ConnectionError:         "Connection Error",
+		DataUnavailable:         "Data Unavailable",
+		InvalidFile:             "Invalid File",
+		Unknown:                 "Unknown",
+		InvalidInput:            "Invalid Input",
+		OutputError:             "Output Error",
+		ContextDeadlineExceeded: "Context Deadline Exceeded",
 	}
 )
 
