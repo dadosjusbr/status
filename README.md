@@ -17,6 +17,7 @@ Abaixo segue uma tabela com os status disponíveis:
 |6|Unknown|Deve ser usando quando um erro inesperado ocorrer.|
 |7|InvalidInput|A entrada do estágio é inválida.|
 |8|OutputError|Quando o estágio não for capaz de imprimir a saída correta.|
+|9|DeadlineExceeded|Quando uma determinada ação não foi concluída dentro do prazo esperado.|
 ______________
 
 ## Exemplo de uso em Go
