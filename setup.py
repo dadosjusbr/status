@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='statusDadosjusbr',
-    version='0.2',
+    version='0.3',
     author="Dadosjusbr",
     author_email="dadosjusbr@gmail.com",
     description="Contém os status de execução dos coletores do DadosjusBr",
